@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #1c1c1e;
+  color: #e0e0e0;
+  padding: 0 20px;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: #2c2c2e;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02); /* Subtle lift and scale */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+  color: #ff8a65;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.card small {
+  color: #888;
+  text-align: center;
+}
+
+.message-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#message-input {
+  padding: 15px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 120px; /* Multi-line text area */
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #000000;
+}
+
+#submit-button {
+  padding: 12px;
+  font-size: 1.1em;
+  width: 100%;
+  background-color: #ff8a65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+#submit-button:hover {
+  background-color: #e67e50;
+  transform: translateY(-3px);
+}
+
+#word-count {
+  font-size: 0.9em;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: right;
+  background-color: #ffffff;
+}
+
+.card-content {
+  max-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  color: #d0d0d0;
+  align-content: center;
+}
+
+.card-content.expanded {
+  max-height: 200px;
+  overflow-y: auto;
+  -webkit-line-clamp: unset;
+}
+
+.read-more {
+  color: #ff8a65;
+  cursor: pointer;
+  margin-top: 10px;
+  display: none;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.read-more.visible {
+  display: inline;
+}
+h1 {
+  margin-bottom: 5px; /* Decrease this value to reduce space */
+}
+
+h6 {
+  margin-top: 0; /* Remove top margin to bring it closer to the h1 */
+  margin-bottom: 10px; /* Adjust bottom margin as needed */
+}
